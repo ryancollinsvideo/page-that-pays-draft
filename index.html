@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Page That Pays — Turn Strangers into Paying Clients in 4 Weeks</title>
+<meta name="description" content="The 4-week intensive for coaches who are done posting into the void. Next cohort: May 2026." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;800&family=Lato:wght@400;700&family=Nunito+Sans:wght@400;600;700&family=Newsreader:ital@1&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Authority Activated brand */
+    --navy: #0F1D6B;
+    --pink: #FE81EB;        /* soft hot pink — text on navy */
+    --magenta: #F92FBC;     /* secondary button fill */
+    --hotpink: #FF33B1;     /* countdown bg */
+    --red: #CD0202;         /* red headline accent */
+    --red-2: #D81319;
+    --white: #FFFFFF;
+    --black: #000000;
+    --cream: #FFF7FB;
+    --line: rgba(15, 29, 107, 0.12);
+    --shadow: 0 8px 30px rgba(15, 29, 107, 0.08);
+    --shadow-lg: 0 18px 50px rgba(15, 29, 107, 0.18);
+
+    /* Type — mapped from her stack using closest free Google Font equivalents */
+    --display: 'Cormorant Garamond', 'Migra Extra Light', serif; /* elegant display */
+    --italic: 'Newsreader', Georgia, serif;
+    --sans-heavy: 'Work Sans', Helvetica, sans-serif;
+    --sans-ui: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --body: 'Lato', 'Nunito Sans', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--body);
+    color: var(--black);
+    background: var(--white);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 72px;
+  }
+  p { font-size: 17px; line-height: 1.55; }
+  a { color: inherit; }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+  .narrow { max-width: 820px; margin: 0 auto; }
+
+  /* ── Utility type styles that match her stack ─────── */
+  .heavy {
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    text-transform: none;
+  }
+  .display {
+    font-family: var(--display);
+    font-weight: 300;
+    letter-spacing: 0em;
+    line-height: 1.1;
+  }
+  .eyebrow {
+    font-family: var(--sans-ui);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    color: var(--navy);
+  }
+  .red { color: var(--red); }
+  .navy { color: var(--navy); }
+  .italic-pop { font-family: var(--italic); font-style: italic; font-weight: 400; }
+
+  /* ── Announcement ─────────────────────────────────── */
+  .announce {
+    background: var(--navy);
+    color: var(--pink);
+    padding: 10px 16px;
+    text-align: center;
+    font-family: var(--sans-ui);
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+  .announce strong { color: var(--white); font-weight: 400; }
+
+  /* ── Hero ─────────────────────────────────────────── */
+  .hero { padding: 72px 0 64px; background: var(--white); }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 56px;
+    align-items: center;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .hero-copy { text-align: left; }
+  .hero-media {
+    position: relative;
+  }
+  .hero-media img.paula {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    display: block;
+  }
+  .hero-media .graphic {
+    position: absolute;
+    left: -40px;
+    bottom: -32px;
+    width: 62%;
+    box-shadow: 0 18px 40px rgba(15,29,107,0.25);
+  }
+  .pink-underline {
+    display: inline-block;
+    position: relative;
+  }
+  .pink-underline::after {
+    content: "";
+    position: absolute;
+    left: -4px; right: -4px;
+    bottom: -8px;
+    height: 14px;
+    background: url('/aa-images/pink_underline_1.png') center/contain no-repeat;
+    pointer-events: none;
+  }
+  .hero-kicker {
+    font-family: var(--sans-heavy);
+    font-weight: 500;
+    color: var(--navy);
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-size: clamp(40px, 5.2vw, 72px);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    margin-bottom: 28px;
+  }
+  .hero h1 .line1 {
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    color: var(--red);
+    display: block;
+  }
+  .hero h1 .line2 {
+    font-family: var(--display);
+    font-weight: 300;
+    color: var(--navy);
+    font-size: 0.85em;
+    display: block;
+    margin-top: 8px;
+  }
+  .hero h1 .line2 em {
+    font-family: var(--italic);
+    font-style: italic;
+    color: var(--magenta);
+  }
+  .hero .sub {
+    font-family: var(--body);
+    font-size: 18px;
+    line-height: 1.55;
+    color: #1a1a1a;
+    max-width: 560px;
+    margin: 0 0 32px;
+  }
+  .hero-copy .sub { margin: 0 0 32px; }
+  @media (max-width: 860px) {
+    .hero-copy .sub { margin: 0 auto 32px; }
+  }
+  .hero .sub strong { color: var(--navy); font-weight: 700; }
+
+  /* ── Buttons (match .st-primary / .st-secondary) ─── */
+  .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    font-family: var(--sans-ui);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    line-height: 1.8;
+  }
+  .btn-primary {
+    background: var(--navy);
+    color: var(--pink);
+  }
+  .btn-primary:hover { background: #091457; color: var(--white); }
+  .btn-secondary {
+    background: var(--magenta);
+    color: var(--navy);
+  }
+  .btn-secondary:hover { background: var(--magenta); color: rgba(0,0,0,0.7); border: 1px solid rgba(0,0,0,0.7); padding: 13px 27px; }
+  .cta-group { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+
+  /* ── Countdown ────────────────────────────────────── */
+  .countdown {
+    background: var(--hotpink);
+    padding: 36px 24px;
+    text-align: center;
+    margin: 56px 0 0;
+  }
+  .countdown-label {
+    color: var(--navy);
+    font-family: var(--sans-heavy);
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .countdown-units { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+  .cd-unit { text-align: center; min-width: 70px; }
+  .cd-num {
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    color: var(--navy);
+    font-size: 56px;
+    line-height: 1;
+    display: block;
+  }
+  .cd-tag {
+    font-family: var(--sans-heavy);
+    font-weight: 500;
+    color: var(--navy);
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 8px;
+  }
+
+  /* ── Stats bar ────────────────────────────────────── */
+  .stats {
+    background: var(--navy);
+    color: var(--pink);
+    padding: 40px 0;
+  }
+  .stats-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: var(--display);
+    font-weight: 300;
+    color: var(--pink);
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .stat-label {
+    font-family: var(--sans-ui);
+    font-size: 13px;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 10px;
+  }
+
+  /* ── Sections ─────────────────────────────────────── */
+  section { padding: 88px 0; }
+  .section-head { text-align: center; margin-bottom: 56px; }
+  .section-title {
+    font-size: clamp(32px, 4.5vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+  .section-title .heavy-red {
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    color: var(--red);
+  }
+  .section-title .display-navy {
+    font-family: var(--display);
+    font-weight: 300;
+    color: var(--navy);
+  }
+  .section-sub {
+    font-family: var(--body);
+    font-size: 18px;
+    color: #333;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  /* ── Pain points / Real Talk ──────────────────────── */
+  .pain { background: var(--white); }
+  .real-talk-badge {
+    display: inline-block;
+    background: var(--red-2);
+    color: var(--white);
+    padding: 8px 18px;
+    font-family: var(--sans-ui);
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .pain-card {
+    background: var(--white);
+    border: 2px solid var(--navy);
+    padding: 32px 28px;
+  }
+  .pain-card h4 {
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    color: var(--navy);
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+    line-height: 1.15;
+  }
+  .pain-card p { font-size: 16px; }
+
+  /* ── It's time to (navy section) ──────────────────── */
+  .its-time {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+  }
+  .its-time .eyebrow { color: var(--pink); }
+  .its-time h2 { color: var(--white); }
+  .its-time .section-title .display-navy { color: var(--pink); }
+  .its-time .section-title em { font-family: var(--italic); font-style: italic; color: var(--pink); font-weight: 400; }
+  .its-time p { color: rgba(255,255,255,0.9); font-size: 19px; }
+
+  /* ── 3-part block (framework) ─────────────────────── */
+  .framework { background: var(--white); }
+  .framework-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 48px;
+  }
+  .fw-card {
+    border: 2px solid var(--red);
+    background: var(--white);
+    padding: 36px 28px;
+    position: relative;
+    text-align: center;
+  }
+  .fw-num {
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--navy);
+    color: var(--pink);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    font-size: 22px;
+  }
+  .fw-card h3 {
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    color: var(--navy);
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    margin: 20px 0 14px;
+    line-height: 1.1;
+    text-transform: none;
+  }
+  .fw-card h3 em {
+    font-family: var(--italic);
+    font-style: italic;
+    color: var(--red);
+    font-weight: 400;
+  }
+  .fw-card p { font-size: 16px; }
+
+  /* ── Quote title (navy interstitial) ──────────────── */
+  .quote-title {
+    background: var(--navy);
+    color: var(--white);
+    padding: 72px 0;
+    text-align: center;
+  }
+  .quote-title .big {
+    font-family: var(--display);
+    font-weight: 300;
+    font-size: clamp(32px, 4.5vw, 54px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--white);
+  }
+  .quote-title .big em {
+    font-family: var(--italic);
+    font-style: italic;
+    color: var(--pink);
+    font-weight: 400;
+  }
+
+  /* ── Testimonials (Charlotte style) ───────────────── */
+  .testimonials { background: var(--white); }
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  .testi-card {
+    background: var(--white);
+    border-top: 4px solid var(--red);
+    padding: 32px 28px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+  }
+  .testi-badge {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    padding: 6px 14px;
+    font-family: var(--sans-ui);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    align-self: flex-start;
+  }
+  .testi-name {
+    font-family: var(--display);
+    font-weight: 300;
+    color: var(--navy);
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .testi-role {
+    font-family: var(--sans-ui);
+    font-size: 13px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 18px;
+  }
+  .testi-result {
+    background: var(--cream);
+    padding: 16px;
+    margin: 16px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--line);
+  }
+  .testi-block { text-align: center; flex: 1; }
+  .testi-block small {
+    font-size: 11px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    font-family: var(--sans-ui);
+  }
+  .testi-block span {
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    color: var(--navy);
+    font-size: 22px;
+    display: block;
+    margin-top: 4px;
+    letter-spacing: -0.02em;
+  }
+  .testi-arrow {
+    color: var(--magenta);
+    font-size: 24px;
+    padding: 0 10px;
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+  }
+  .testi-headline {
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    color: var(--navy);
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  .testi-quote {
+    font-family: var(--italic);
+    font-style: italic;
+    color: #1a1a1a;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+  }
+  .testi-proof {
+    margin: 16px -8px 0;
+    padding: 10px 8px 0;
+    border-top: 1px solid var(--line);
+  }
+  .testi-proof img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .testi-proof-label {
+    font-family: var(--sans-ui);
+    font-size: 11px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+
+  /* ── Hard truth (pink block) ──────────────────────── */
+  .hard-truth {
+    background: var(--hotpink);
+    text-align: center;
+  }
+  .hard-truth .eyebrow { color: var(--navy); }
+  .hard-truth h2 .heavy-red { color: var(--navy); }
+  .hard-truth h2 .display-navy { color: var(--white); }
+
+  /* ── Curriculum ───────────────────────────────────── */
+  .curriculum { background: var(--white); }
+  .weeks { display: grid; gap: 18px; margin-top: 48px; }
+  .week {
+    background: var(--white);
+    border: 2px solid var(--navy);
+    padding: 28px 32px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+  .week-tag {
+    background: var(--navy);
+    color: var(--pink);
+    padding: 10px 0;
+    text-align: center;
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .week h4 {
+    font-family: var(--display);
+    font-weight: 300;
+    color: var(--navy);
+    font-size: 28px;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+    line-height: 1.1;
+  }
+  .week h4 em { font-family: var(--italic); font-style: italic; color: var(--red); font-weight: 400; }
+  .week p { font-size: 16px; margin-bottom: 12px; }
+  .week ul { list-style: none; padding: 0; }
+  .week li {
+    padding-left: 22px;
+    position: relative;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 6px;
+    font-family: var(--body);
+  }
+  .week li::before {
+    content: "→";
+    color: var(--magenta);
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+  }
+
+  /* ── Pricing ──────────────────────────────────────── */
+  .pricing { background: var(--cream); }
+  .price-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+    max-width: 920px;
+    margin: 48px auto 0;
+  }
+  .price-card {
+    background: var(--white);
+    padding: 40px 36px;
+    box-shadow: var(--shadow);
+    position: relative;
+    border-top: 6px solid var(--navy);
+  }
+  .price-card.featured {
+    background: var(--navy);
+    color: var(--white);
+    box-shadow: var(--shadow-lg);
+    border-top-color: var(--magenta);
+  }
+  .price-card.featured h3,
+  .price-card.featured .price-amount,
+  .price-card.featured .price-plan { color: var(--pink); }
+  .price-card.featured .price-features li { color: rgba(255,255,255,0.92); border-color: rgba(255,255,255,0.12); }
+  .price-badge {
+    position: absolute;
+    top: -14px;
+    right: 24px;
+    background: var(--hotpink);
+    color: var(--navy);
+    padding: 6px 14px;
+    font-family: var(--sans-ui);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .price-card h3 {
+    font-family: var(--display);
+    font-weight: 300;
+    color: var(--navy);
+    font-size: 36px;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .price-card h3 em { font-family: var(--italic); font-style: italic; color: var(--magenta); }
+  .price-amount {
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    color: var(--navy);
+    font-size: 52px;
+    line-height: 1;
+    margin: 20px 0 6px;
+    letter-spacing: -0.03em;
+  }
+  .price-amount small {
+    font-family: var(--sans-ui);
+    font-size: 14px;
+    color: #666;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .price-card.featured .price-amount small { color: rgba(255,255,255,0.65); }
+  .price-plan {
+    font-family: var(--sans-ui);
+    font-size: 13px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 24px;
+  }
+  .scarcity {
+    background: var(--red);
+    color: var(--white);
+    padding: 10px 14px;
+    font-family: var(--sans-ui);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .price-card.featured .scarcity { background: var(--magenta); color: var(--navy); }
+  .price-features { list-style: none; padding: 0; margin: 20px 0 28px; }
+  .price-features li {
+    padding: 12px 0 12px 28px;
+    position: relative;
+    border-bottom: 1px solid var(--line);
+    font-size: 15px;
+    font-family: var(--body);
+    color: #1a1a1a;
+  }
+  .price-features li::before {
+    content: "✓";
+    color: var(--magenta);
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+  }
+  .price-features li strong { color: inherit; font-weight: 700; }
+
+  /* ── Value stack ──────────────────────────────────── */
+  .stack {
+    max-width: 640px;
+    margin: 56px auto 0;
+    background: var(--white);
+    padding: 32px;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--red);
+  }
+  .stack h4 {
+    font-family: var(--sans-ui);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  .stack-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--line);
+    font-size: 15px;
+    font-family: var(--body);
+  }
+  .stack-row:last-of-type { border: none; }
+  .stack-row strong { font-family: var(--sans-heavy); font-weight: 700; color: var(--navy); }
+  .stack-total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18px;
+    margin-top: 12px;
+    border-top: 2px solid var(--navy);
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+  }
+  .stack-total .discount { color: var(--red); }
+
+  /* ── Not for you ──────────────────────────────────── */
+  .not-for-wrap { background: var(--white); }
+  .not-for {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 44px;
+    border: 2px solid var(--red);
+  }
+  .not-for h3 {
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    color: var(--red);
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    line-height: 1.15;
+  }
+  .not-for ul { list-style: none; padding: 0; }
+  .not-for li {
+    padding: 12px 0 12px 32px;
+    position: relative;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-family: var(--body);
+  }
+  .not-for li::before {
+    content: "✕";
+    color: var(--red);
+    position: absolute;
+    left: 0;
+    font-weight: 800;
+    font-family: var(--sans-heavy);
+  }
+
+  /* ── FAQ ──────────────────────────────────────────── */
+  .faq { background: var(--white); }
+  .faq-list { max-width: 820px; margin: 48px auto 0; }
+  details {
+    background: var(--white);
+    margin-bottom: 14px;
+    border: 2px solid var(--navy);
+    overflow: hidden;
+  }
+  summary {
+    padding: 22px 26px;
+    cursor: pointer;
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    color: var(--navy);
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.2;
+  }
+  summary::after {
+    content: "+";
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    font-size: 28px;
+    color: var(--magenta);
+    transition: transform 0.2s ease;
+    margin-left: 16px;
+  }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p {
+    padding: 0 26px 22px;
+    color: #1a1a1a;
+    font-size: 15px;
+    font-family: var(--body);
+  }
+
+  /* ── Final CTA ────────────────────────────────────── */
+  .final {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+  }
+  .final h2 { color: var(--white); }
+  .final h2 .heavy-red { color: var(--pink); }
+  .final h2 .display-navy { color: var(--white); }
+  .final h2 em { font-family: var(--italic); font-style: italic; color: var(--pink); font-weight: 400; }
+  .final p { color: rgba(255,255,255,0.85); font-size: 18px; margin: 20px auto 32px; max-width: 580px; }
+  .final .small {
+    font-family: var(--sans-ui);
+    font-size: 13px;
+    margin-top: 24px;
+    color: var(--pink);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Sticky CTA ───────────────────────────────────── */
+  .sticky-cta {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--navy);
+    color: var(--pink);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -8px 30px rgba(15,29,107,0.2);
+    z-index: 100;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    gap: 16px;
+  }
+  .sticky-cta.visible { transform: translateY(0); }
+  .sticky-cta .info {
+    font-family: var(--sans-ui);
+    font-size: 13px;
+    letter-spacing: 0.03em;
+  }
+  .sticky-cta .info strong {
+    color: var(--pink);
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    display: block;
+  }
+  .sticky-cta .btn-secondary { padding: 10px 20px; font-size: 14px; }
+
+  /* ── Footer ───────────────────────────────────────── */
+  footer {
+    padding: 40px 0 80px;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    background: var(--white);
+    font-family: var(--sans-ui);
+    letter-spacing: 0.03em;
+  }
+  footer strong { color: var(--navy); font-family: var(--sans-heavy); font-weight: 800; letter-spacing: -0.02em; }
+
+  /* ── Before/After mockup band ─────────────────────── */
+  .ba-band {
+    background: var(--white);
+    padding: 88px 0;
+    text-align: center;
+  }
+  .ba-stack { max-width: 900px; margin: 48px auto 0; }
+  .ba-stack img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .ba-caption {
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    color: var(--navy);
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+  .ba-caption em { font-family: var(--italic); font-style: italic; color: var(--red); font-weight: 400; text-transform: none; letter-spacing: -0.01em; }
+
+  /* ── Wavy accent ──────────────────────────────────── */
+  .wavy-accent {
+    height: 18px;
+    background: url('/aa-images/3.png') repeat-x center;
+    background-size: auto 100%;
+  }
+
+  /* ── Landscape photo interstitial ─────────────────── */
+  .its-time-media {
+    position: relative;
+    background: var(--navy);
+    color: var(--white);
+    padding: 0;
+    text-align: center;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .its-time-media .bg {
+    position: absolute;
+    inset: 0;
+    background: url('/aa-images/only_landscape_one.jpg') center/cover no-repeat;
+    opacity: 0.35;
+  }
+  .its-time-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15,29,107,0.6) 0%, rgba(15,29,107,0.85) 100%);
+  }
+  .its-time-media .container { position: relative; z-index: 2; padding: 88px 24px; }
+
+  /* ── Inside-the-room photo band ───────────────────── */
+  .photo-band {
+    background: var(--white);
+    padding: 64px 0 16px;
+  }
+  .photo-band-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .photo-band-grid img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    display: block;
+  }
+  .photo-band-grid img:nth-child(2) { aspect-ratio: 3/4; }
+
+  /* ── Mobile ───────────────────────────────────────── */
+  @media (max-width: 860px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-media { order: -1; max-width: 420px; margin: 0 auto; }
+    .hero-media .graphic { left: -20px; bottom: -18px; width: 60%; }
+    .cta-group { justify-content: center !important; }
+    .hero-copy { text-align: center; }
+  }
+  @media (max-width: 768px) {
+    section { padding: 64px 0; }
+    .framework-grid { grid-template-columns: 1fr; }
+    .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .week { grid-template-columns: 1fr; gap: 16px; }
+    .week-tag { justify-self: start; padding: 8px 18px; }
+    .price-card.featured { transform: none; }
+    .cd-num { font-size: 40px; }
+    .countdown-units { gap: 18px; }
+    .cd-unit { min-width: 56px; }
+    .sticky-cta { padding: 10px 16px; }
+    .sticky-cta .info strong { font-size: 15px; }
+    .photo-band-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Announcement -->
+<div class="announce">
+  ✦ <strong>Early Bird saves £100</strong> — but only til the timer runs out
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="hero-kicker">May 2026 Cohort · 4 Weeks · Live</div>
+        <h1>
+          <span class="line1">TURN STRANGERS<br>INTO <span class="pink-underline">PAYING</span> CLIENTS.</span>
+          <span class="line2">Without more followers, referrals, or <em>DM spam.</em></span>
+        </h1>
+        <p class="sub">
+          The 4-week intensive that rebuilds your social presence into a page that <strong>actually pays.</strong>
+          For coaches and service-based founders who are done shouting into an empty room.
+        </p>
+        <div class="cta-group" style="justify-content: flex-start;">
+          <a href="#pricing" class="btn btn-primary">Yes, I'm In</a>
+          <a href="#how" class="btn btn-secondary">Show Me How</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img class="paula" src="/aa-images/j8a0336.jpg" alt="Paula with the Authority Activated mood board" />
+        <img class="graphic" src="/aa-images/show_it_size_the_page_than_pays_2.png" alt="The Page That Pays program" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Countdown -->
+  <div class="countdown" id="countdown">
+    <div class="container">
+      <div class="countdown-label">Fast Action Pricing Ends In</div>
+      <div class="countdown-units">
+        <div class="cd-unit"><span class="cd-num" id="cd-days">00</span><span class="cd-tag">Days</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cd-hours">00</span><span class="cd-tag">Hours</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cd-mins">00</span><span class="cd-tag">Mins</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cd-secs">00</span><span class="cd-tag">Secs</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" style="padding: 48px 0;">
+  <div class="container">
+    <div class="stats-inner">
+      <div>
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Hot Leads Generated</div>
+      </div>
+      <div>
+        <div class="stat-num">2.5×</div>
+        <div class="stat-label">Avg ROI in 2 Weeks</div>
+      </div>
+      <div>
+        <div class="stat-num">95%</div>
+        <div class="stat-label">Close Rate (Kelly)</div>
+      </div>
+      <div>
+        <div class="stat-num">8K</div>
+        <div class="stat-label">Followers in 60 Days</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN POINTS / REAL TALK -->
+<section class="pain">
+  <div class="container">
+    <div class="section-head">
+      <span class="real-talk-badge">Real Talk</span>
+      <h2 class="section-title">
+        <span class="heavy-red">YOU'RE POSTING.</span><br>
+        <span class="display-navy italic-pop"><em>So why isn't anyone buying?</em></span>
+      </h2>
+    </div>
+    <div class="pain-grid narrow" style="max-width: 900px;">
+      <div class="pain-card">
+        <h4>IF YOU'RE JUST GETTING STARTED</h4>
+        <p>You're shouting into an empty room, girl. The likes trickle in from friends and fellow coaches — but no one's ever swiped up, DM'd, or actually bought a thing.</p>
+      </div>
+      <div class="pain-card">
+        <h4>IF YOU'VE BEEN AT IT A WHILE</h4>
+        <p>You've got the following. You've got the content. But your income still depends on referrals, launches, and luck — not on the page itself doing the work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IT'S TIME TO (landscape photo interstitial) -->
+<section class="its-time-media">
+  <div class="bg"></div>
+  <div class="container narrow">
+    <span class="eyebrow" style="color: var(--pink);">It's Time To</span>
+    <h2 class="section-title" style="margin-top: 20px; color: var(--white);">
+      <span class="display-navy" style="color: var(--white);">Build the <em style="font-family: var(--italic); font-style: italic; color: var(--pink); font-weight: 400;">bridge</em></span><br>
+      <span class="display-navy" style="color: var(--pink);">between strangers and sales.</span>
+    </h2>
+    <p style="margin-top: 28px; color: rgba(255,255,255,0.92); font-size: 19px;">
+      The gap isn't your content. It isn't your offer. It isn't your follower count.<br>
+      It's the <em style="color: var(--pink);">bridge</em> — and this is where we build it.
+    </p>
+  </div>
+</section>
+
+<!-- FRAMEWORK -->
+<section class="framework" id="how">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The Method</span>
+      <h2 class="section-title" style="margin-top: 16px;">
+        <span class="heavy-red">THE A.C.E. FRAMEWORK</span><br>
+        <span class="display-navy"><em class="italic-pop">seen → sold in three moves.</em></span>
+      </h2>
+      <p class="section-sub">A system — not a hack. Works whether you have 500 followers or 50,000.</p>
+    </div>
+    <div class="framework-grid">
+      <div class="fw-card">
+        <div class="fw-num">A</div>
+        <h3>Activate <em>your edge</em></h3>
+        <p>Stop being "a coach." Become <em>the</em> coach for a specific woman in a specific moment. 80% of pages lose the sale before she even reads the bio.</p>
+      </div>
+      <div class="fw-card">
+        <div class="fw-num">C</div>
+        <h3>Claim <em>the page</em></h3>
+        <p>Every square inch re-engineered with one job: take a cold stranger and warm her up to buy — in under 90 seconds flat.</p>
+      </div>
+      <div class="fw-card">
+        <div class="fw-num">E</div>
+        <h3>Elevate <em>the sales engine</em></h3>
+        <p>The DM flow. The content cadence. The nurture sequence. Predictable, repeatable — so your sales don't live or die by the algorithm.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="ba-band">
+  <div class="container">
+    <div class="section-head" style="margin-bottom: 20px;">
+      <span class="real-talk-badge">Page Rebuilds</span>
+      <h2 class="section-title">
+        <span class="heavy-red">BEFORE.</span>
+        <span class="display-navy italic-pop"><em>After.</em></span>
+      </h2>
+      <p class="section-sub">Same woman. Same platform. New page — new income.</p>
+    </div>
+    <div class="ba-stack">
+      <img src="/aa-images/6.png" alt="Before and after Instagram profile — pink branded rebuild">
+      <div class="ba-caption">Real client · real rebuild · <em>same week</em></div>
+    </div>
+    <div class="ba-stack" style="margin-top: 40px;">
+      <img src="/aa-images/7.png" alt="Before and after Instagram profile — wellness coach transformation">
+      <div class="ba-caption">From confused to <em>unmissable</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- Wavy accent divider -->
+<div class="wavy-accent"></div>
+
+<!-- QUOTE INTERSTITIAL -->
+<section class="quote-title">
+  <div class="container narrow">
+    <p class="big">
+      "My page used to be a billboard.<br>
+      Now it's my <em>hardest-working team member.</em>"
+    </p>
+    <p style="margin-top: 24px; font-family: var(--sans-ui); color: var(--pink); font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em;">— Lisa, Business Coach · Cohort 3</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head">
+      <span class="real-talk-badge">Case Studies</span>
+      <h2 class="section-title">
+        <span class="heavy-red">REAL CLIENTS.</span><br>
+        <span class="display-navy italic-pop"><em>real numbers.</em></span>
+      </h2>
+      <p class="section-sub">Every one: before → after → how long. No fluff.</p>
+    </div>
+    <div class="testi-grid">
+
+      <div class="testi-card">
+        <span class="testi-badge">2 Weeks</span>
+        <div class="testi-name">Lisa</div>
+        <div class="testi-role">Business Coach · UK</div>
+        <div class="testi-headline">From £1–3K months to £12K MRR</div>
+        <div class="testi-result">
+          <div class="testi-block"><small>Before</small><span>£1–3K</span></div>
+          <div class="testi-arrow">→</div>
+          <div class="testi-block"><small>After</small><span>£12K</span></div>
+        </div>
+        <p class="testi-quote">"2.5× ROI before the cohort even ended. I finally have a page that sells while I sleep."</p>
+        <div class="testi-proof">
+          <div class="testi-proof-label">Screenshot — real DM</div>
+          <img src="/aa-images/proof_of_growth_vip.png" alt="Lisa DM screenshot — above & beyond, mind blown" />
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <span class="testi-badge">3 Months</span>
+        <div class="testi-name">Kelly</div>
+        <div class="testi-role">Mindset Coach · US</div>
+        <div class="testi-headline">60+ high-ticket clients at 95% close rate</div>
+        <div class="testi-result">
+          <div class="testi-block"><small>Before</small><span>~40%</span></div>
+          <div class="testi-arrow">→</div>
+          <div class="testi-block"><small>After</small><span>95%</span></div>
+        </div>
+        <p class="testi-quote">"The leads come in pre-sold. I'm not chasing anymore — I'm choosing."</p>
+        <div class="testi-proof">
+          <div class="testi-proof-label">Screenshot — real DM</div>
+          <img src="/aa-images/proof_of_growth_kel.png" alt="Kelly DM — ROI in 1 week, strategy is working" />
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <span class="testi-badge">60 Days</span>
+        <div class="testi-name">Jen</div>
+        <div class="testi-role">Coach · UK</div>
+        <div class="testi-headline">Leads on fire, content finally working</div>
+        <div class="testi-result">
+          <div class="testi-block"><small>Before</small><span>Overthinking</span></div>
+          <div class="testi-arrow">→</div>
+          <div class="testi-block"><small>After</small><span>Flowing</span></div>
+        </div>
+        <p class="testi-quote">"I'm doing trial reels every night. Views and followers going up. Not overthinking — just connecting."</p>
+        <div class="testi-proof">
+          <div class="testi-proof-label">Screenshot — real DM</div>
+          <img src="/aa-images/proof_of_growth_jen.png" alt="Jen DM — on fire, leads coming in, content flowing" />
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <span class="testi-badge">4 Weeks</span>
+        <div class="testi-name">Charlotte</div>
+        <div class="testi-role">Wellness Coach · UK</div>
+        <div class="testi-headline">20% sign-up rate in hours, £3K target smashed</div>
+        <div class="testi-result">
+          <div class="testi-block"><small>Before</small><span>0 leads</span></div>
+          <div class="testi-arrow">→</div>
+          <div class="testi-block"><small>After</small><span>500+</span></div>
+        </div>
+        <p class="testi-quote">"So much growth! 500 new emails and a 3K day. You're a genius."</p>
+        <div class="testi-proof">
+          <div class="testi-proof-label">Screenshot — Slack chat</div>
+          <img src="/aa-images/proof_of_growth_3_charl.png" alt="Charlotte Slack — so much growth, 20% sign up rate, 3K target" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HARD TRUTH (pink block) -->
+<section class="hard-truth">
+  <div class="container narrow">
+    <span class="eyebrow">The Hard Truth</span>
+    <h2 class="section-title" style="margin-top: 16px;">
+      <span class="heavy-red">You don't have<br>a content problem.</span><br>
+      <span class="display-navy italic-pop"><em>You have a bridge problem.</em></span>
+    </h2>
+    <p style="margin-top: 24px; color: var(--navy); font-size: 19px;">And the bridge is exactly what we're building for you over the next 4 weeks.</p>
+  </div>
+</section>
+
+<!-- PHOTO BAND -->
+<section class="photo-band">
+  <div class="container">
+    <div class="photo-band-grid">
+      <img src="/aa-images/j8a1727.jpg" alt="Paula at her laptop in a red tulle skirt">
+      <img src="/aa-images/j8a9858.jpg" alt="Paula holding the Authority Activated booklet">
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section class="curriculum">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Inside The Room</span>
+      <h2 class="section-title" style="margin-top: 16px;">
+        <span class="heavy-red">4 WEEKS. 4 SHIFTS.</span><br>
+        <span class="display-navy italic-pop"><em>one page that pays.</em></span>
+      </h2>
+      <p class="section-sub">Live calls, templates, and peer feedback every step.</p>
+    </div>
+
+    <div class="weeks narrow" style="max-width: 880px;">
+      <div class="week">
+        <div class="week-tag">Week 01</div>
+        <div>
+          <h4>Positioning <em>that pulls</em></h4>
+          <p>Rewrite who you serve, what you solve, and why <em>you</em> — in words a cold stranger understands in 7 seconds flat.</p>
+          <ul>
+            <li>The 3-sentence pitch that stops the scroll</li>
+            <li>Niche audit + repositioning templates</li>
+            <li>Live teardown of your current bio</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="week-tag">Week 02</div>
+        <div>
+          <h4>The page <em>rebuild</em></h4>
+          <p>Your IG / LinkedIn / landing page, re-engineered piece by piece — every square inch with a conversion job.</p>
+          <ul>
+            <li>Bio, highlights, pinned posts, link-in-bio</li>
+            <li>The "first 90 seconds" checklist</li>
+            <li>Mobile-first layout review</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="week-tag">Week 03</div>
+        <div>
+          <h4>The content <em>engine</em></h4>
+          <p>Stop posting for the algorithm. Start posting for the buyer — with a weekly cadence that nurtures and sells.</p>
+          <ul>
+            <li>The 5-post weekly framework</li>
+            <li>Hook library + swipe file</li>
+            <li>Story & carousel templates</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="week-tag">Week 04</div>
+        <div>
+          <h4>The sales <em>flow</em></h4>
+          <p>The DMs. The CTA. The checkout. Turn attention into offers and offers into clients — predictably.</p>
+          <ul>
+            <li>The DM script (non-salesy, non-spammy)</li>
+            <li>Nurture sequence template</li>
+            <li>Objection handling cheat sheet</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Your Seat</span>
+      <h2 class="section-title" style="margin-top: 16px;">
+        <span class="heavy-red">TWO WAYS IN.</span><br>
+        <span class="display-navy italic-pop"><em>pick yours.</em></span>
+      </h2>
+      <p class="section-sub">Early bird pricing ends when the timer hits zero.</p>
+    </div>
+
+    <div class="price-grid">
+      <!-- Standard -->
+      <div class="price-card">
+        <div class="scarcity">⚡ Early Bird — Save £100</div>
+        <h3>The <em>Intensive</em></h3>
+        <div class="price-amount">£595 <small>pay in full</small></div>
+        <div class="price-plan">Or 2 × £300</div>
+        <ul class="price-features">
+          <li>4 weeks of live group coaching</li>
+          <li>Full framework + templates library</li>
+          <li>Weekly page teardowns</li>
+          <li>Private Telegram community</li>
+          <li>Recordings + lifetime access</li>
+        </ul>
+        <a href="#" class="btn btn-primary" style="width: 100%; text-align: center; display: block;">Yes, I'm In</a>
+      </div>
+
+      <!-- VIP -->
+      <div class="price-card featured">
+        <div class="price-badge">Only 2 Left</div>
+        <div class="scarcity">🔒 3 VIP Slots · 2 Remain</div>
+        <h3>VIP</h3>
+        <div class="price-amount">£745 <small>pay in full</small></div>
+        <div class="price-plan">Or 3 × £250</div>
+        <ul class="price-features">
+          <li>Everything in The Intensive</li>
+          <li><strong>60–90 min private 1:1 with Paula</strong></li>
+          <li>Personal page audit + rewrite</li>
+          <li>Priority DM support for 4 weeks</li>
+          <li>30-day post-cohort follow-up call</li>
+        </ul>
+        <a href="#" class="btn btn-secondary" style="width: 100%; text-align: center; display: block;">I'm A VIP</a>
+      </div>
+    </div>
+
+    <!-- Value stack -->
+    <div class="stack">
+      <h4>What You're Actually Getting</h4>
+      <div class="stack-row"><span>Live group coaching (4 weeks)</span><strong>£1,200</strong></div>
+      <div class="stack-row"><span>Framework + template library</span><strong>£495</strong></div>
+      <div class="stack-row"><span>Weekly page teardown sessions</span><strong>£600</strong></div>
+      <div class="stack-row"><span>Hook library + swipe files</span><strong>£200</strong></div>
+      <div class="stack-row"><span>Private Telegram community</span><strong>£300</strong></div>
+      <div class="stack-row"><span>Lifetime recordings + access</span><strong>£300</strong></div>
+      <div class="stack-total"><span>Total Value</span><span>£3,095</span></div>
+      <div class="stack-total" style="border: none; padding-top: 8px; margin-top: 0;"><span>Your Price Today</span><span class="discount">£595</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- NOT FOR YOU -->
+<section class="not-for-wrap">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Honesty Check</span>
+      <h2 class="section-title" style="margin-top: 16px;">
+        <span class="display-navy italic-pop"><em>This probably isn't for you if…</em></span>
+      </h2>
+    </div>
+    <div class="not-for">
+      <ul>
+        <li>You want a viral hack, not a system you can run for years.</li>
+        <li>You're not willing to rewrite your bio, pinned posts, or positioning.</li>
+        <li>You don't have a clear offer yet. (Start there first — this won't fix that.)</li>
+        <li>You want someone to do it for you. This is coaching, not done-for-you.</li>
+        <li>You won't show up to the live sessions. Recordings exist, but the magic is live.</li>
+      </ul>
+      <p style="margin-top: 24px; color: #555; font-size: 15px;">
+        If any of that landed — skip it. If none of it did, <a href="#pricing" style="color: var(--red); font-weight: 700;">your seat is waiting.</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="section-title" style="margin-top: 16px;">
+        <span class="heavy-red">THE QUESTIONS</span><br>
+        <span class="display-navy italic-pop"><em>everyone asks.</em></span>
+      </h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>WHEN DOES THE MAY COHORT START AND END?</summary>
+        <p>We kick off Monday 4th May 2026 and wrap Sunday 31st May. Live calls run Tuesdays and Thursdays at 7pm UK time, with recordings inside 24 hours.</p>
+      </details>
+      <details>
+        <summary>WHAT IF I CAN'T MAKE THE LIVE CALLS?</summary>
+        <p>Every session is recorded and uploaded within 24 hours. You can also submit questions ahead of time in Telegram, and Paula will answer them live — so you still get personalised feedback.</p>
+      </details>
+      <details>
+        <summary>I DON'T HAVE A BIG FOLLOWING. WILL THIS STILL WORK?</summary>
+        <p>Yes — and arguably better. Small, well-positioned pages convert harder than big, vague ones. Charlotte started under 1,000 followers and generated 500 leads. The framework doesn't require scale; it requires specificity.</p>
+      </details>
+      <details>
+        <summary>WHICH PLATFORMS DOES THIS COVER?</summary>
+        <p>Primarily Instagram and LinkedIn — but the framework applies to any platform where your people actually are. Past clients have used it for TikTok, Substack, and YouTube too.</p>
+      </details>
+      <details>
+        <summary>IS THERE A REFUND POLICY?</summary>
+        <p>If you show up to the first two weeks of live calls, do the homework, and feel it's not for you — email us within 14 days of start and we'll refund you in full. No questions, no drama.</p>
+      </details>
+      <details>
+        <summary>WHAT HAPPENS AFTER THE 4 WEEKS?</summary>
+        <p>You keep lifetime access to recordings and the template library. VIP clients get a 30-day follow-up call. Alumni also get first access to future cohorts and advanced workshops at member pricing.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="container narrow">
+    <h2 class="section-title">
+      <span class="heavy-red">YOUR PAGE IS WORKING</span><br>
+      <span class="display-navy"><em>for someone.</em></span><br>
+      <span class="display-navy" style="color: var(--pink);">Make sure it's <em>you.</em></span>
+    </h2>
+    <p>Four weeks from now, your page either pays — or it doesn't.<br>This is the room where it starts.</p>
+    <a href="#pricing" class="btn btn-secondary">Save My Seat</a>
+    <div class="small">Next Cohort: 4 May 2026 · Limited to 25 Seats</div>
+  </div>
+</section>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta" id="stickyCTA">
+  <div class="info">
+    <strong>£595 — Early Bird</strong>
+    <span>Ends in <span id="sticky-timer">—</span></span>
+  </div>
+  <a href="#pricing" class="btn btn-secondary">Yes, I'm In</a>
+</div>
+
+<footer>
+  <div class="container">
+    © 2026 <strong>THE HAUS OF AUTHORITY</strong> · hello@coachingwithpaula.co.uk
+  </div>
+</footer>
+
+<script>
+  // Countdown — 7 days from page load
+  const target = new Date();
+  target.setDate(target.getDate() + 7);
+  target.setHours(23, 59, 59, 0);
+
+  const pad = n => String(n).padStart(2, '0');
+
+  function tick() {
+    let diff = Math.max(0, target.getTime() - Date.now());
+    const d = Math.floor(diff / 86400000); diff -= d * 86400000;
+    const h = Math.floor(diff / 3600000);  diff -= h * 3600000;
+    const m = Math.floor(diff / 60000);    diff -= m * 60000;
+    const s = Math.floor(diff / 1000);
+
+    document.getElementById('cd-days').textContent = pad(d);
+    document.getElementById('cd-hours').textContent = pad(h);
+    document.getElementById('cd-mins').textContent = pad(m);
+    document.getElementById('cd-secs').textContent = pad(s);
+    document.getElementById('sticky-timer').textContent = `${pad(d)}d ${pad(h)}h ${pad(m)}m`;
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  // Sticky CTA
+  const sticky = document.getElementById('stickyCTA');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) sticky.classList.add('visible');
+    else sticky.classList.remove('visible');
+  });
+</script>
+</body>
+</html>
