@@ -881,11 +881,57 @@
     padding: 88px 0;
     text-align: center;
   }
-  .ba-stack { max-width: 900px; margin: 48px auto 0; }
+  .ba-stack { max-width: 900px; margin: 48px auto 0; position: relative; }
   .ba-stack img {
     width: 100%;
     height: auto;
     display: block;
+  }
+  .ba-arrow {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+  }
+  .ba-arrow path {
+    fill: none;
+    stroke: var(--red);
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 2px 6px rgba(205,2,2,0.35));
+  }
+  .ba-callout {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-4deg);
+    background: var(--red);
+    color: #fff;
+    padding: 10px 20px;
+    font-family: var(--sans-heavy);
+    font-weight: 800;
+    font-size: clamp(16px, 2vw, 22px);
+    letter-spacing: -0.02em;
+    box-shadow: 0 8px 24px rgba(205,2,2,0.35);
+    white-space: nowrap;
+    z-index: 2;
+  }
+  .ba-callout small {
+    display: block;
+    font-family: var(--sans-ui);
+    font-size: 0.55em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 2px;
+    opacity: 0.9;
+  }
+  @media (max-width: 640px) {
+    .ba-callout { padding: 8px 14px; font-size: 14px; }
+    .ba-arrow path { stroke-width: 4; }
   }
   .ba-caption {
     font-family: var(--sans-heavy);
@@ -1130,10 +1176,29 @@
     </div>
     <div class="ba-stack">
       <img src="aa-images/6.png" alt="Before and after Instagram profile — pink branded rebuild">
-      <div class="ba-caption">Real client · real rebuild · <em>same week</em></div>
+      <svg class="ba-arrow" viewBox="0 0 900 480" preserveAspectRatio="none">
+        <path d="M 210 360 Q 370 180, 520 200 T 760 140" marker-end="url(#head1)" />
+        <defs>
+          <marker id="head1" viewBox="0 0 12 12" refX="6" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+            <path d="M0,0 L12,6 L0,12 z" fill="#CD0202"/>
+          </marker>
+        </defs>
+      </svg>
+      <div class="ba-callout">196 → 1,520 <small>followers · 1 rebuild</small></div>
+      <div class="ba-caption">Paula's own page · real rebuild · <em>same week</em></div>
     </div>
-    <div class="ba-stack" style="margin-top: 40px;">
-      <img src="aa-images/7.png" alt="Before and after Instagram profile — wellness coach transformation">
+
+    <div class="ba-stack" style="margin-top: 56px;">
+      <img src="aa-images/7.png" alt="Before and after Instagram profile — coach transformation">
+      <svg class="ba-arrow" viewBox="0 0 900 480" preserveAspectRatio="none">
+        <path d="M 200 370 Q 380 200, 540 210 T 770 150" marker-end="url(#head2)" />
+        <defs>
+          <marker id="head2" viewBox="0 0 12 12" refX="6" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+            <path d="M0,0 L12,6 L0,12 z" fill="#CD0202"/>
+          </marker>
+        </defs>
+      </svg>
+      <div class="ba-callout">1,994 → 4,276 <small>followers · 2× growth</small></div>
       <div class="ba-caption">From confused to <em>unmissable</em></div>
     </div>
   </div>
